@@ -1,0 +1,19 @@
+config HAS_CAAM
+	bool
+
+config WOKOO_CONFIG
+	string
+
+config ROM_UNIFIED_SECTIONS
+	bool
+
+config GPT_TIMER
+	bool
+
+config SECURE_BOOT
+	bool "Support WOKOO secure boot features"
+	depends on ARCH_WOKOO
+	select FSL_CAAM if HAS_CAAM
+	imply CMD_DEKBLOB
+	help
+	  This option enables the support for secure boot.

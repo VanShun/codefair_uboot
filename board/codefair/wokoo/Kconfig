@@ -1,0 +1,12 @@
+if TARGET_WOKOO_CODEFAIR
+
+config SYS_BOARD
+	default "wokoo"
+
+config SYS_VENDOR
+	default "codefair"
+
+config SYS_CONFIG_NAME
+	default "codefair"
+
+endif

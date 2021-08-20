@@ -1,0 +1,14 @@
+#ifndef WOKOO_REG_ADDRESS_H_
+#define WOKOO_REG_ADDRESS_H_
+
+
+
+
+#define IRAM_BASE_ADDR			0x9ff80000
+#define IRAM_SIZE				0x00020000
+#define ROMCP_ARB_BASE_ADDR		0xFFFF0000
+#define ROMCP_ARB_SIZE			0x00010000
+
+
+
+#endif
