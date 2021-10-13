@@ -22,9 +22,9 @@ unsigned wokoo_ddr_size(void)
 {
 #if defined(CONFIG_WOKOO_DDR3)
 
-	return 0x8000000;
+	return 0x8000000;       //128M
 #else
-    return 0x2000000;
+    return 0x2000000;       //32M
 #endif
 }
 

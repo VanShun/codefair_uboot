@@ -81,18 +81,18 @@
 			232 233 234 235 236 237 238 239
 			240 241 242 243 244 245 246 247
 			248 249 250 251 252 253 254 255>;
-		default-brightness-level = <200>;
+		default-brightness-level = <100>;
 	};
-   /*
+
+	/*
 	backlight:backlight {
 		compatible = "wokoo-backlight";
 		bl-gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
 		switch-gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
 		default-on;
 	};
-   
+	*/
 
-	 */
 	lcdc_spi:lcdc_spi{
 	    compatible = "wokoo-lcdc";
 	    reset-gpios = <&gpio0 21 GPIO_ACTIVE_HIGH>;
@@ -298,19 +298,22 @@
 	display-timings {
 		native-mode = <&timing0>;
 		timing0: timing0{
-			clock-frequency = <32000000>;
+			//clock-frequency = <32000000>;
+			clock-frequency = <16000000>;
 			hactive = <800>;
 			vactive = <480>;
-			hfront-porch = <175>;
+			//hfront-porch = <210>;
+			hfront-porch = <60>;
 			hback-porch = <46>;
 			hsync-len = <4>;
-			vfront-porch = <10>;
+			//vfront-porch = <100>;
+			vfront-porch = <30>;
 			vback-porch = <23>;
 			vsync-len = <7>;
-			hsync-active = <1>;
-            vsync-active = <1>;
+			hsync-active = <20>;
+            vsync-active = <20>;
             //de-active = <1>;
-                        //pixelclk-active = <1>;
+            //pixelclk-active = <1>;
 		};
 	};
 };
